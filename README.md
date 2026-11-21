@@ -46,6 +46,17 @@ Browser notifications require explicit permission and a secure context (HTTPS, o
 2. Import it in Vercel and use the Vite preset (build command `npm run build`, output directory `dist`).
 3. Deploy. No environment variables are required. Browser notifications are available on the resulting HTTPS site after permission is granted.
 
+## Deploy to GitHub Pages
+
+This repository includes a GitHub Actions workflow that builds the Vite app and publishes the `dist` folder. The Vite build is configured for the repository URL `https://<username>.github.io/CyberPulse/`.
+
+1. Push the project files, including `.github/workflows/pages.yml`, to the `main` branch.
+2. In GitHub, open **Settings → Pages** and set **Build and deployment → Source** to **GitHub Actions**.
+3. Open the **Actions** tab and wait for **Deploy CyberPulse to GitHub Pages** to finish successfully.
+4. Visit `https://<username>.github.io/CyberPulse/`.
+
+If the repository has a different name, update the production `base` path in `vite.config.ts` to match that repository name before publishing.
+
 ## Screenshots
 
 Add a screenshot of the message experience here after deployment, for example `![CyberPulse message](docs/message.png)`.
